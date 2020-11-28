@@ -1,0 +1,17 @@
+@import-normalize;
+@import "./song.css";
+@import "./player.css";
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: rgb(54, 54, 54);
+}
