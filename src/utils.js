@@ -62,6 +62,16 @@ function chillHop() {
       active: false,
     },
     //ADD MORE HERE
+    {
+      name: "Maple Leaf Pt.2",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/09/2899f7cc22ab12e17d0119819aac3ca9dbab46e6-1024x1024.jpg",
+      artist: "Philanthrope",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10243",
+      color: ["#de774a", "#e16636"],
+      id: uuidv4(),
+      active: false,
+    },
   ]
 }
 
