@@ -3,6 +3,7 @@ import { useState, useRef } from "react"
 import Song from "./components/Song"
 import Player from "./components/Player"
 import Library from "./components/Library"
+import Nav from "./components/Nav"
 // Adding styles
 import "./styles/app.css"
 // Import Util
@@ -17,6 +18,7 @@ function App() {
     currentTime: 0,
     duration: 0,
   })
+  const [libraryStatus, setLibraryStatus] = useState(false)
   // Ref
   const audioRef = useRef(null)
 
@@ -27,7 +29,8 @@ function App() {
   }
 
   return (
-    <>
+    <div className="App">
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player
         audioRef={audioRef}
@@ -38,8 +41,10 @@ function App() {
         setSongInfo={setSongInfo}
       />
       <Library
+        libraryStatus={libraryStatus}
         audioRef={audioRef}
         songs={songs}
+        setSongs={setSongs}
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
       />
@@ -49,7 +54,7 @@ function App() {
         ref={audioRef}
         src={currentSong.audio}
       ></audio>
-    </>
+    </div>
   )
 }
 

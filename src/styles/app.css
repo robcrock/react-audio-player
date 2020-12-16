@@ -1,7 +1,8 @@
-@import-normalize;
+/* @import-normalize; */
 @import "./song.css";
 @import "./player.css";
 @import "./library.css";
+@import "./nav.css";
 
 *,
 *::before,
